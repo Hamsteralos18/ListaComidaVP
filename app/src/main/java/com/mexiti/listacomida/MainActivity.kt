@@ -96,14 +96,19 @@ fun MenuCard(platillo: Platillo, modifier: Modifier = Modifier){
             ) {
                 Text(
                     text = "Pozole",
-                    style = MaterialTheme.typography.headlineSmall
+                    style = MaterialTheme.typography.displayLarge
 
                 )
-                Text(text = "MX $100.0 ")
+                Text(
+                    text = "MX $100.0 ",
+                    style = MaterialTheme.typography.labelSmall
+
+                )
                 Text(
                     text = "Ahorra hasta el 30%",
-                    fontWeight = FontWeight.Bold,
-                    color = md_theme_dark_onSecondary
+                    color = md_theme_dark_onSecondary,
+                    style = MaterialTheme.typography.displayMedium
+
                     
                 )
             }
