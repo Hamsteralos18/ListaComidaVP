@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ListaComida</string>
+    <string name="app_name">Commudel</string>
     <string name="desayuno">Desayunos en familia</string>
     <string name="hamburger">Hamburguesa extra grande</string>
     <string name="pizza">Pizzas a la orden</string>
