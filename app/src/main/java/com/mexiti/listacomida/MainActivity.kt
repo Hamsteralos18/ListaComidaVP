@@ -56,6 +56,12 @@ fun MenuApp(){
     )
 }
 
+
+@Composable
+fun MenuTopAppBar(modifier: Modifier = Modifier){
+
+}
+
 @Composable
 fun MenuCardList( platilloList:List<Platillo>, modifier: Modifier = Modifier ){
     LazyColumn( modifier = modifier ){
