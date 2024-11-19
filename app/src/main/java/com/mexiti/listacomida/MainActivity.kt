@@ -25,6 +25,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -71,7 +72,7 @@ fun MenuTopAppBar(modifier: Modifier = Modifier){
                 ) {
                     Image(
 
-                        painter = painterResource(id = R.drawable.logo_commudel),
+                        painter = painterResource(id = R.drawable.comidalogo),
                         contentDescription = null,
                         modifier = modifier
                             .padding(8.dp)
@@ -105,7 +106,7 @@ fun MenuCardList( platilloList:List<Platillo>, modifier: Modifier = Modifier ){
         items(platilloList){
             platillo -> MenuCard(
             platillo = platillo,
-                modifier= Modifier.padding(10.dp)
+                modifier= modifier.padding(10.dp)
             )
             }
 
@@ -138,8 +139,15 @@ fun MenuCard(platillo: Platillo, modifier: Modifier = Modifier){
                 modifier =
                     Modifier.padding(start = 20.dp)
             ) {
+
                 Text(
-                    text = "Pozole",
+                    text = LocalContext.current.getString(platillo.stringResourceId),
+                    modifier = modifier.padding(22.dp),
+                    style = MaterialTheme.typography.titleLarge
+                )
+
+                Text(
+                    text = "Rebaja",
                     style = MaterialTheme.typography.displayLarge
 
                 )
@@ -149,7 +157,7 @@ fun MenuCard(platillo: Platillo, modifier: Modifier = Modifier){
 
                 )
                 Text(
-                    text = "Ahorra hasta el 30%",
+                    text = "Ahorra hasta 30%",
                     color = md_theme_dark_onSecondary,
                     style = MaterialTheme.typography.displayMedium
 

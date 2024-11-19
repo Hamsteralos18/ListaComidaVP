@@ -5,7 +5,7 @@ import com.mexiti.listacomida.model.Platillo
 
 class DataSource() {
     fun LoadPlatillos(): List<Platillo> {
-        return listOf<Platillo>(
+        return listOf(
             Platillo(R.string.desayuno , R.drawable.desayuno ),
             Platillo(R.string.hamburger , R.drawable.hamburger ),
             Platillo(R.string.pizza , R.drawable.pizza ),
